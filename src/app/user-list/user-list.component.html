@@ -1,0 +1,22 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Date</th>
+            <th scope="col">No Of Packets</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.id }}</td>
+            <td>{{ user.date | date}}</td>
+            <td>{{ user.noOfPockets }}</td>
+            <td><button (click) = "delete(user.id)" >Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
